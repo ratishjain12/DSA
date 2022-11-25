@@ -6,7 +6,7 @@ int findFloor(Node *root, int input)
         if (root->data == input)
         {
             Floor = input;
-            return Ceil;
+            return Floor;
         }
 
         if (input < root->data)
