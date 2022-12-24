@@ -1,6 +1,8 @@
-
+#include <iostream>
+using namespace std;
 class Node
 {
+public:
     int data;
     Node *next;
     Node(int d)
@@ -8,7 +10,7 @@ class Node
         this->data = d;
         this->next = NULL;
     }
-}
+};
 
 class myStack
 {
@@ -79,4 +81,4 @@ public:
             temp = temp->next;
         }
     }
-}
+};

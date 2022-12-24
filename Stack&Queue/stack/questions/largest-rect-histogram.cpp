@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include <stack>
 using namespace std;
 int getMaxArea(int arr[], int n)
