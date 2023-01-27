@@ -12,7 +12,9 @@ int longestOnes(vector<int> &nums, int k)
         while (zeroCount > k)
         {
             if (nums[i] == 0)
+            {
                 zeroCount--;
+            }
             i++;
         }
         result = max(result, j - i + 1);
