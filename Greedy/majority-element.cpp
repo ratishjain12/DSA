@@ -1,7 +1,6 @@
 // moore's voting algorithm
 int majorityElement(int a[], int n)
 {
-
     // your code here
     int ans = a[0], freq = 1;
     for (int i = 1; i < n; i++)
