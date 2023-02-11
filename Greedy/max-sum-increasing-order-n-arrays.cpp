@@ -1,6 +1,5 @@
 int maximumSum(int n, int m, vector<vector<int>> &a)
 {
-
     // Complete the function
     int sum = 0;
     int limit = INT_MAX;
