@@ -32,6 +32,8 @@ int minCoins(int coins[], int M, int V)
         return ans;
 }
 
+//--------------------------------------------------//
+
 // bottom-up approach - tabulation
 int solveTab(int coins[], int M, int V)
 {
