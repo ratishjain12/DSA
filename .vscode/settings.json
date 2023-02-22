@@ -1,6 +1,11 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp"
     }
 }
