@@ -36,7 +36,7 @@ int combinationSum4(vector<int> &nums, int target)
         {
             if (i - nums[j] >= 0)
             {
-                dp[i] += dp[i - nums[j]] % mod;
+                dp[i] += dp[i - nums[j]];
             }
         }
     }
