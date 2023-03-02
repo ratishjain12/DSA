@@ -50,7 +50,7 @@ int maximalSquare(vector<vector<char>> &matrix)
 {
     int n = matrix.size();
     int m = matrix[0].size();
-    vector<vector<int>> dp(n, vector<int>(m, -1));
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1, -1));
     int maxi = 0;
     solve(matrix, 0, 0, maxi, dp);
     return maxi * maxi;
