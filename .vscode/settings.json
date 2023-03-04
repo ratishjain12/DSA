@@ -6,6 +6,9 @@
         "iosfwd": "cpp",
         "iterator": "cpp",
         "chrono": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "string": "cpp"
     }
 }
