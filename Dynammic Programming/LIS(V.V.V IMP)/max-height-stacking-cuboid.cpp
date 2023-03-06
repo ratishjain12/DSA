@@ -2,6 +2,7 @@
 // leetcode HARD
 // given 2D vector where each element is a vector defining width,height and lenght
 // cuboids[i] = [Wi,Hi,Li] and cuboid can be rotated
+
 bool check(vector<int> &base, vector<int> &newBox)
 {
     if (newBox[0] <= base[0] && newBox[1] <= base[1] && newBox[2] <= base[2])

@@ -1,6 +1,6 @@
 // bruteforce
 
-// left rotate
+// left rotate(do dry run and you'll get it)
 void leftRotate(int arr[], int k, int n)
 {
     // Your code goes
@@ -19,6 +19,9 @@ void leftRotate(int arr[], int k, int n)
         arr[i] = temp[i - (n - k)];
     }
 }
+
+//right rotate 
+
 
 // both left and right rotate optimal solution reversal algorithm
 
