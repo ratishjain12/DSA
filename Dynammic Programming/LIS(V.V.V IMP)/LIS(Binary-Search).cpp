@@ -3,6 +3,7 @@
 // if we find a greater element then last we simply add that element in ans
 // else we find index for smallest number greater then the element in the ans and
 // replace that with the element
+    
 int longestSubsequence(int n, int a[])
 {
     // your code here
