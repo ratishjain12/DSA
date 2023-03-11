@@ -29,3 +29,35 @@ bool isSubsetSum(vector<int> arr, int target)
 
     return subsetSum(0, N, arr, target, dp);
 }
+
+// Tabulation
+bool subsetSumTabulation(vector<int> arr, int total)
+{
+    int N = arr.size();
+    vector<vector<int>> dp(N + 1, vector<int>(total + 1, 0));
+    for (int i = 0; i <= N; i++)
+    {
+        dp[i][0] = 1;
+    }
+
+    for (int index = N - 1; index >= 0; index--)
+    {
+        for (int target = 0; target <= total; target++)
+        {
+            bool incl = 0;
+            if (target - arr[index] >= 0)
+                incl = dp[index + 1][target - arr[index]];
+            bool excl = dp[index + 1][target];
+
+            dp[index][target] = incl || excl;
+        }
+    }
+    return dp[0][total];
+}
+
+bool isSubsetSum(vector<int> arr, int target)
+{
+    // code here
+
+    return subsetSumTabulation(arr, target);
+}
