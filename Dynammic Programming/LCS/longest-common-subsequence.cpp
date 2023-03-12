@@ -25,7 +25,7 @@ int solve(string s1, string s2, int i, int j, vector<vector<int>> &dp)
 
     return dp[i][j] = ans;
 }
-int lcs(int x, int y, string s1, string s2)
+int lcs(string s1, string s2)
 {
     // your code here
     vector<vector<int>> dp(s1.length() + 1, vector<int>(s2.length() + 1, -1));
@@ -33,7 +33,7 @@ int lcs(int x, int y, string s1, string s2)
 }
 
 // tabulation(Bottom-up)
-int lcs(int x, int y, string s1, string s2)
+int lcs(string s1, string s2)
 {
     // your code here
     vector<vector<int>> dp(s1.length() + 1, vector<int>(s2.length() + 1, 0));
