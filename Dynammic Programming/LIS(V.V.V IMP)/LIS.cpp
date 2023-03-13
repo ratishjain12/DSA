@@ -57,7 +57,7 @@ int longestSubsequence(int n, int a[])
             int include = 0;
             if (prev == -1 || a[curr] > a[prev])
             {
-                include = 1 + dp[curr + 1][curr + 1]; // curr+1 to make sure to change preve
+                include = 1 + dp[curr + 1][curr + 1]; // curr+1 to make sure to change prev
             }
             int exclude = dp[curr + 1][prev + 1]; // prev + 1 for no negative value
             dp[curr][prev + 1] = max(include, exclude);
