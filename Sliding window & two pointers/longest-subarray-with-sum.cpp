@@ -1,4 +1,5 @@
 // one approach
+// takes space but solves for both positives and negatives in array
 int lenOfLongSubarr(int a[], int n, int k)
 {
     // Complete the function
