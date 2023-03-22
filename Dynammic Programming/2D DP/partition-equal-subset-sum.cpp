@@ -56,7 +56,7 @@ int subsetSumTabulation(int N, int arr[], int total)
 
     for (int index = N - 1; index >= 0; index--)
     {
-        for (int target = 0; target <= total / 2; target++)
+        for (int target = 0; target <= total; target++)
         {
             bool incl = 0;
             if (target - arr[index] >= 0)
@@ -83,5 +83,53 @@ int equalPartition(int N, int arr[])
     if (total % 2 != 0)
         return 0;
 
-    return subsetSumTabulation(N, arr, total);
+    return subsetSumTabulation(N, arr, total / 2);
+}
+
+// Aditya Verma
+bool subsetSum(vector<int> &nums, int sum)
+{
+    bool t[nums.size() + 1][sum + 1];
+    for (int j = 0; j <= sum; j++)
+    {
+        t[0][j] = false;
+    }
+    for (int i = 0; i <= nums.size(); i++)
+    {
+        t[i][0] = true;
+    }
+    for (int i = 1; i <= nums.size(); i++)
+    {
+        for (int j = 1; j <= sum; j++)
+        {
+            if (nums[i - 1] <= j)
+            {
+                t[i][j] = t[i - 1][j - nums[i - 1]] || t[i - 1][j];
+            }
+            else
+            {
+                t[i][j] = t[i - 1][j];
+            }
+        }
+    }
+    return t[nums.size()][sum];
+}
+
+public:
+bool canPartition(vector<int> &nums)
+{
+    int sum = 0;
+    for (int i = 0; i < nums.size(); i++)
+    {
+        sum += nums[i];
+    }
+    if (sum % 2 != 0)
+    {
+        return false;
+    }
+    if (sum % 2 == 0)
+    {
+        return subsetSum(nums, sum / 2);
+    }
+    return true;
 }

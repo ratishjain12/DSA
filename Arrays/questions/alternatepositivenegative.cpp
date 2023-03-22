@@ -42,7 +42,7 @@ void rearrange(int arr[], int n)
 	while (i < j)
 	{
 		while (i <= n - 1 && arr[i] >= 0)
-		{ // change if first number must be psotive
+		{ // change if first number must be postive
 			i++;
 		}
 		while (j >= 0 && arr[j] < 0)
