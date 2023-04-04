@@ -1,28 +1,31 @@
-#include<iostream>
-#include<vector>;
-using namespace std;
-
-
-void nextPermutation(vector<int>& nums) {
-    int n = nums.size();
-    int idx1;
-    for(int i = n-2;i>=0;i--){
-        if(nums[i]<nums[i+1]){
-            idx1 = i;
+vector<int> nextPermutation(int N, vector<int> arr)
+{
+    // code here
+    int ind = -1;
+    for (int i = N - 2; i >= 0; i--) // finding break point
+    {
+        if (arr[i] < arr[i + 1])
+        {
+            ind = i;
             break;
         }
     }
-    int idx2;
-    if(idx1<0){
-        reverse(nums.begin(),nums.end());
-    }else{
-        for(int i = n-1;i>idx1;i--){
-            if(nums[i]>nums[idx1]){
-                idx2 = i;
-                break;
-            }
-        }
-        swap(nums[idx1],nums[idx2]);
-        reverse(nums.begin()+idx1+1,nums.end());
+
+    if (ind == -1) // if no break point means array is in descending order reverse it
+    {
+        reverse(arr.begin(), arr.end());
+        return arr;
     }
+
+    for (int i = N - 1; i >= ind; i--) // swap the next greater element with element and break point
+    {
+        if (arr[i] > arr[ind])
+        {
+            swap(arr[i], arr[ind]);
+            break;
+        }
+    }
+
+    sort(arr.begin() + ind + 1, arr.end()); // sorting the array after break point index
+    return arr;
 }
