@@ -26,6 +26,7 @@
         "unordered_set": "cpp",
         "utility": "cpp",
         "__bit_reference": "cpp",
-        "__string": "cpp"
+        "__string": "cpp",
+        "ios": "cpp"
     }
 }

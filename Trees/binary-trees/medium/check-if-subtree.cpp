@@ -1,4 +1,4 @@
-bool isSame(Node *T, Node *S)
+bool isSame(Node *T, Node *S) // for every root and check with subtroot
 {
     if (T == NULL && S == NULL)
     {
