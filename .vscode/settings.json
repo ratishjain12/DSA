@@ -27,6 +27,7 @@
         "utility": "cpp",
         "__bit_reference": "cpp",
         "__string": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "__node_handle": "cpp"
     }
 }
