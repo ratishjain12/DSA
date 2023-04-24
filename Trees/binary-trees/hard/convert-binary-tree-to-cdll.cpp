@@ -1,5 +1,6 @@
 // watch to anuj bhaiya video for complete understanding
 // convert in inorder fashion
+//  same as convert to doubly linked list but change last element next to head and head prev to the element.
 Node *head = NULL, *prev = NULL;
 void convertToCDLL(Node *root)
 {
