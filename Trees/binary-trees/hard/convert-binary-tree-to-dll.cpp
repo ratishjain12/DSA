@@ -1,4 +1,5 @@
 // watch to anuj bhaiya video for complete understanding
+// convert in inorder fashion 
 Node *head = NULL, *prev = NULL;
 void convertToDLL(Node *root)
 {
