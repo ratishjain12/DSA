@@ -1,20 +1,11 @@
-int longestSequence(vector<int> &nums)
+int findLongestConseqSubseq(int arr[], int n)
 {
-    int n = nums.size();
+    // Your code here
+    unordered_set<int> st(arr, arr + n);
     int longest = 1;
-    unordered_set<int> st;
-    if (nums.size() == 0)
-    {
-        return 0;
-    }
-    for (int i = 0; i < nums.size(); i++)
-    {
-        st.insert(nums[i]);
-    }
-
     for (auto it : st)
     {
-        if (st.find(it - 1) == st.end())
+        if (st.find(it - 1) == st.end()) // check for a number below if not then we count for continuous number after it
         {
             int cnt = 1;
             int x = it;
