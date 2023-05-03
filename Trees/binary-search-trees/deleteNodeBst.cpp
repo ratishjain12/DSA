@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
-Node *minVal(Node *root)
+int minVal(Node *root)
 {
-    if (root->left == NULL)
-        return root;
-    minVal(root->left);
+    while(root->left){
+        root = root->left;
+    }
+    return root->data;
 }
 Node *deleteNode(Node *root, int X)
 {
@@ -36,9 +37,9 @@ Node *deleteNode(Node *root, int X)
             return temp;
         }
         // 2 child
-        if (root->left != NULL && root->right != NULL)
+        if (root->left != NULL && root->right != NULL) 
         {
-            int mini = minVal(root->right)->data;
+            int mini = minVal(root->right); // inorder successor(closet number greater than root)
             root->data = mini;
             root->right = deleteNode(root->right, mini);
             return root;
@@ -47,11 +48,9 @@ Node *deleteNode(Node *root, int X)
     else if (root->data > X)
     {
         root->left = deleteNode(root->left, X);
-        return root;
     }
     else
     {
         root->right = deleteNode(root->right, X);
-        return root;
     }
 }
