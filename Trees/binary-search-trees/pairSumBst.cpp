@@ -14,7 +14,7 @@ int isPairPresent(struct Node *root, int target)
     vector<int> inorder;
     inorderTrav(root, inorder);
     int l = 0, r = inorder.size() - 1;
-    while (l <= r)
+    while (l < r)
     {
         if (inorder[l] + inorder[r] > target)
         {

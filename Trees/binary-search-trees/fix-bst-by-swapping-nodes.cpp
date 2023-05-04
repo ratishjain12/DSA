@@ -34,40 +34,32 @@ struct Node *correctBST(struct Node *root)
 
 // O(1) space solution
 
-class Solution
-{
-private:
-    TreeNode *first;
-    TreeNode *prev;
-    TreeNode *last;
-
-private:
-    void inorder(TreeNode *root)
-    {
-        if (root == NULL)
-        {
-            return;
-        }
-        inorder(root->left);
-        if (prev != NULL && root->val < prev->val)
-        {
-            if (first == NULL)
-            {
+class Solution {
+    
+  private:
+    Node *prev = NULL;
+    Node *first = NULL;
+    Node *second = NULL;
+  public:
+    
+    void fixBST(Node *root){
+        if(root == NULL) return;
+        fixBST(root->left);
+        if(prev != NULL && root->data < prev->data){
+            if(first == NULL){
                 first = prev;
             }
-            last = root;
+            second = root;
         }
         prev = root;
-        inorder(root->right);
+        fixBST(root->right);
     }
-
-public:
-    void recoverTree(TreeNode *root)
+    void correctBST( struct Node* root )
     {
-        first = last = NULL;
-        prev = new TreeNode(INT_MIN);
-        inorder(root);
-        if (first && last)
-            swap(first->val, last->val);
+        // add code here.
+        fixBST(root);
+        if(first && second){
+            swap(first->data,second->data);
+        }
     }
 };
