@@ -21,9 +21,6 @@ vector<int> bfsOfGraph(int V, vector<int> adj[],int s) {
     
 }
 
-
-
-
 // type 2 if source node is not given and graph is disconnected
 
 void bfs(vector<int> adj[],int u,vector<int>&ans,vector<int>&visited){
