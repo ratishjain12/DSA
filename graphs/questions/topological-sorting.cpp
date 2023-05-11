@@ -1,4 +1,5 @@
 // Given a Directed Acyclic Graph (DAG) with V vertices and E edges,
+
 // Kahn's algorithm
 vector<int> topoSort(int V, vector<int> adj[]) 
 {
@@ -30,3 +31,7 @@ vector<int> topoSort(int V, vector<int> adj[])
     }
     return ans;
 }
+
+//DFS algorithm
+
+
