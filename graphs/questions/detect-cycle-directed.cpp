@@ -1,3 +1,4 @@
+// based on kahn's algorithm
 bool isCyclic(int V, vector<int> adj[]) {
         
     vector<int>inDegree(V,0);
