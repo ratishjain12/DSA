@@ -21,6 +21,8 @@ void dfs(int node,int parent,int c, int d,int&ans,vector<int>adj[],vector<int>&v
 //Function to find if the given edge is a bridge in graph.
 // give is node and a edge between c to d check whether it is a bridge
 // bridge is any edge on removal of which it creates two or more components of graph
+
+
 int isBridge(int V, vector<int> adj[], int c, int d) 
 {
     // Code here
