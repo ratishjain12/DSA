@@ -1,7 +1,7 @@
 //find shortest distance to all vertex from source vertex S
 //we use min heap to store pair of {dist,node}
 //do bfs for each node and keep track of shortest distance using dist vector
-
+// it only works for positive weights
 vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
 {
     // Code here
