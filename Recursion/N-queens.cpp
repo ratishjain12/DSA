@@ -65,3 +65,60 @@ bool isSafe(int i,int j,vector<vector<char>>&chessBoard,int n){
         help(0,n,chessBoard,ans);
         return ans;
     }
+
+
+// for understanding purpose
+int isSafe(char board[][4],int r, int c,int n){
+    // check for the column
+    for(int i=0;i<r;i++){
+        if(board[i][c] == 'Q'){
+            return 0;
+        }
+    }
+    // '\'
+    for(int i=r,j=c; i>=0 && j>=0;j--,i--){
+        if(board[i][j] == 'Q'){
+            return 0;
+        }
+    }
+    // '/'
+    for(int i=r,j=c;i>=0 && j<n;i--,j++){
+        if(board[i][j] == 'Q'){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+void printSol(char board[][4],int n){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            printf("%c ",board[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+void nQueen(char board[][4],int r, int n){
+    if(r == n){
+        printSol(board,n);
+        return;
+    }
+    
+    for(int i=0;i<n;i++){
+        if(isSafe(board,r,i,n)){
+            board[r][i] = 'Q';
+            nQueen(board,r+1,n);
+            board[r][i] = '-';
+        }
+    }
+}
+
+int main() {
+    char board[4][4];
+    memset(board, '-', sizeof board);
+    nQueen(board,0,4);
+    
+    return 0;
+}
