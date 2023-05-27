@@ -1,4 +1,4 @@
-Node *middle(Node *head){
+Node *middle(Node *head){ // find element just before the middle node
     Node *fast = head,*slow=head;
     Node *prevMid;
     while(fast&&fast->next){
@@ -19,9 +19,6 @@ Node* deleteMid(Node* head)
     mid->next = mid->next->next;
 
     delete(temp);
-
-
-
     return head;
 
 }
