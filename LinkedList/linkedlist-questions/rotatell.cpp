@@ -25,3 +25,26 @@ ListNode* rotateRight(ListNode* head, int k) {
     temp->next = NULL;
     return head;
 }
+
+
+// left shift 
+
+Node* rotate(Node* head, int k){
+    // Your code here
+    Node *curr = head;
+    while(curr->next){
+        curr = curr->next;
+    }
+    
+    curr->next = head;
+    
+    curr = head;
+    Node *prev;
+    while(k--){
+        prev = curr;
+        curr = curr = curr->next;
+    }
+    
+    prev->next = NULL;
+    return curr;
+}
