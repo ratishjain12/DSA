@@ -1,5 +1,4 @@
-    void removeLoop(Node* head)
-    {
+    void removeLoop(Node* head){
         // code here
         // just remove the loop without losing any nodes
         if(head == NULL || head->next == NULL){
