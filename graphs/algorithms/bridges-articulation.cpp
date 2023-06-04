@@ -52,7 +52,7 @@ void dfs(int node,int parent,vector<int>adj[],vector<int>&vis,vector<int>&disc,v
         }
         
         if(!vis[it]){
-            dfs(it,node,adj,vis,disc,low,timer);
+            dfs(it,node,adj,vis,disc,low,mark,timer);
             low[node] = min(low[node],low[it]);
             if(low[it] >= disc[node] && parent != -1){ // condition for a bridge
                 mark[node] = 1;

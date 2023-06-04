@@ -37,5 +37,4 @@ Node* sortedMerge(Node* head1, Node* head2)
     }
     
     return head;
-    
 }  

@@ -53,17 +53,17 @@ int isNegativeWeightCycle(int n, vector<vector<int>>edges){
                 dist[v] = dist[u] + wt;
             }
         }
-}
+    }
 
 // Nth relaxation to check for negative weight cycle
-for(auto it : edges){
-    int u = it[0];
-    int v = it[1];
-    int wt = it[2];
-    if(dist[u] != 1e8 && dist[u] + wt < dist[v]){
-        return 1;
+    for(auto it : edges){
+        int u = it[0];
+        int v = it[1];
+        int wt = it[2];
+        if(dist[u] != 1e8 && dist[u] + wt < dist[v]){
+            return 1;
+        }
     }
-}
 
-return 0;
+    return 0;
 }
