@@ -3,7 +3,6 @@ void connect(Node *root)
 {
 
     // Your Code Here
-
     queue<Node *> q;
 
     q.push(root);
