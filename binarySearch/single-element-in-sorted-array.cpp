@@ -19,9 +19,9 @@ int singleElement(int arr[],int n){
         }
 
         if((mid%2 == 1 && arr[mid] == arr[mid-1]) || (mid%2 == 0 && arr[mid] == arr[mid+1])){
-            low = mid+1;
+            l = mid+1;
         }else{
-            high = mid-1;
+            h = mid-1;
         }
     }
 
