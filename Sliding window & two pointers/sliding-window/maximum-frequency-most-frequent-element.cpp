@@ -6,7 +6,7 @@ int maxFrequency(vector<int>& nums, int k) {
     int r = 0;
     long long sum = 0;
     int len = 0;
-    sort(nums.begin(),nums.end());
+    sort(nums.begin(),nums.end()); // sorting is necessary to find the element we want to make other elements equal to.
 
     for(;r<nums.size();r++){
         sum+=nums[r];
