@@ -1,3 +1,5 @@
+//row and column are sorted 
+//but first element of row is not necessarily greater than last of previous row
 bool search(vector<vector<int>> matrix, int n, int m, int x)
 {
     // code here
